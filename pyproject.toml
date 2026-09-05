@@ -12,8 +12,15 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "flask>=3.1.3",
     "playwright>=1.62.0",
+    "typer>=0.27.2",
 ]
 
 [project.scripts]
-get = "brcn:get"
+brcn = "brcn:app"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.5",
+]
