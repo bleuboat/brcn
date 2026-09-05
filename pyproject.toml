@@ -10,6 +10,8 @@ readme = "README.md"
 authors = [
     { name = "bleuboat", email = "3751541788@qq.com" }
 ]
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.14"
 dependencies = [
     "flask>=3.1.3",
