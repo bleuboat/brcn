@@ -1,5 +1,6 @@
-from re import DOTALL, MULTILINE, Match, compile, findall
 from typing import Any
+
+from regex import DOTALL, MULTILINE, Match, compile, findall
 
 from ._utils import Renderer
 

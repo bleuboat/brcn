@@ -1,5 +1,6 @@
-from re import MULTILINE, Match, compile
 from typing import Any
+
+from regex import MULTILINE, Match, compile
 
 from ._utils import Renderer
 

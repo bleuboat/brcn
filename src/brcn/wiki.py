@@ -116,10 +116,12 @@ class Wiki:
 
 if __name__ == "__main__":
     source = """
-~~~~
-~~~~<
-~~~~>
-~~~~=
+[[code type="css"]]
+:root {
+    --content: "Hello, world!";
+    --color: red;
+}
+[[/code]]
 """
     output = Wiki().render(source)
     print(output)

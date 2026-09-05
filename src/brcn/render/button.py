@@ -1,5 +1,6 @@
-from re import DOTALL, IGNORECASE, Match, compile
 from typing import Any
+
+from regex import DOTALL, IGNORECASE, Match, compile
 
 from ._utils import Renderer
 

@@ -1,5 +1,6 @@
-from re import Match, compile
 from typing import Any
+
+from regex import Match, compile
 
 from ._utils import Renderer
 

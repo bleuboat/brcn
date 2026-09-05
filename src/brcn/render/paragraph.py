@@ -1,5 +1,6 @@
-from re import DOTALL, MULTILINE, Match, compile
 from typing import Any
+
+from regex import DOTALL, MULTILINE, Match, compile
 
 from ._utils import DELIM, Renderer
 

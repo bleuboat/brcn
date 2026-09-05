@@ -1,10 +1,11 @@
 from abc import ABC, abstractmethod
-from re import (
+from typing import TYPE_CHECKING, Any
+
+from regex import (
     Match,
     Pattern,
     sub,
 )
-from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
     from ..wiki import Wiki
