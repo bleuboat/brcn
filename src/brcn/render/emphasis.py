@@ -5,8 +5,8 @@ from regex import Match, compile
 from ._utils import Renderer
 
 
-class Strong(Renderer):
-    regex = compile(r"\*\*([^\s\n](?:.*?[^\s\n])?)\*\*")
+class Emphasis(Renderer):
+    regex = compile(r"//([^\s](?:.*?[^\s])?)//")
 
     def process(self, matches: Match[str]) -> str:
         start = self.token(type="start")
@@ -16,5 +16,5 @@ class Strong(Renderer):
     def render(self, options: dict[str, Any]) -> str:
         type = options["type"]
         if type == "start":
-            return "<strong>"
-        return "</strong>"
+            return "<em>"
+        return "</em>"

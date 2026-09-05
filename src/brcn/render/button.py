@@ -10,7 +10,7 @@ class Button(Renderer):
 
     def process(self, matches: Match[str]) -> str:
         type = matches[1].replace("_", "-")
-        attr = self.attrs(matches[2]) if matches[2] else {}
+        attr = self.attrs(matches[2])
         options: dict[str, str] = {}
         for a in ("text", "class", "style"):
             if a in attr:

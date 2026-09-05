@@ -1,77 +1,6 @@
 from typing import Any
 
-from .render import DELIM, RENDERERS, Renderer
-
-RULES = [
-    "Include",
-    "Prefilter",
-    "Delimiter",
-    "Code",
-    "Form",
-    "Raw",
-    "Rawold",
-    "Modulepre",
-    "Module",
-    "Module654",
-    "Iftags",
-    "Comment",
-    "Iframe",
-    "Date",
-    "Math",
-    "Concatlines",
-    "Freelink",
-    "Equationreference",
-    "Footnote",
-    "Footnoteitem",
-    "Footnoteblock",
-    "Bibitem",
-    "Bibliography",
-    "Bibcite",
-    "Divprefilter",
-    "Anchor",
-    "User",
-    "Blockquote",
-    "Heading",
-    "Toc",
-    "Horiz",
-    "Separator",
-    "Clearfloat",
-    "Break",
-    "Span",
-    "Size",
-    "Div",
-    "Divalign",
-    "Collapsible",
-    "Tabview",
-    "Note",
-    "Gallery",
-    "List",
-    "Deflist",
-    "Table",
-    "Tableadv",
-    "Button",
-    "Image",
-    "Embed",
-    "Social",
-    "File",
-    "Center",
-    "Newline",
-    "Paragraph" ,
-    "Url",
-    "Email",
-    "Mathinline",
-    "Interwiki",
-    "Colortext",
-    "Strong",
-    "Emphasis",
-    "Underline",
-    "Strikethrough",
-    "Tt",
-    "Superscript",
-    "Subscript",
-    "Typography",
-    "Tighten",
-]
+from .render import DELIM, RENDERERS, RULES, Renderer
 
 
 class Wiki:
@@ -116,12 +45,15 @@ class Wiki:
 
 if __name__ == "__main__":
     source = """
-[[code type="css"]]
-:root {
-    --content: "Hello, world!";
-    --color: red;
-}
-[[/code]]
+* 无序列表
+* 列表之二
+ * 列表嵌套
+
+# 有序列表
+# 二号
+
+: 定义列表 : 内容
+: 二号 : 内容之二
 """
     output = Wiki().render(source)
     print(output)
