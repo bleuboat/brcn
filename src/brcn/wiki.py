@@ -45,15 +45,7 @@ class Wiki:
 
 if __name__ == "__main__":
     source = """
-* 无序列表
-* 列表之二
- * 列表嵌套
-
-# 有序列表
-# 二号
-
-: 定义列表 : 内容
-: 二号 : 内容之二
+<< A >>
 """
     output = Wiki().render(source)
     print(output)

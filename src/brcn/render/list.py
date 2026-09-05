@@ -14,7 +14,6 @@ class List(Renderer):
         stack: list[str] = []
         itemcount: list[int] = []
         for val in lst:
-            print(val)
             level = len(val[0]) + 1
             type = {"*": "bullet", "#": "number"}[val[1]]
             if level > len(stack):

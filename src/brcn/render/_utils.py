@@ -1,4 +1,3 @@
-from abc import ABC, abstractmethod
 from logging import getLogger
 from traceback import format_exc
 from typing import TYPE_CHECKING, Any
@@ -88,7 +87,7 @@ RULES = [
 ]
 
 
-class Renderer(ABC):
+class Renderer:
     regex: Pattern[str]
 
     def __init__(self, wiki: Wiki) -> None:
@@ -127,7 +126,6 @@ class Renderer(ABC):
             key = val[pos + 1:].strip()
         return attrs
 
-    @abstractmethod
     def process(self, matches: Match[str]) -> str:
         raise NotImplementedError
 
